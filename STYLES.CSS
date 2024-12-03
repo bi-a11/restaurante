@@ -1,0 +1,245 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav .logo h1 {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+/* Sección de inicio */
+.inicio {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('restaurant-bg.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.inicio h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.inicio p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Sección de variedades de tacos */
+#variedades {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.taco-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.taco {
+    width: 30%;
+    margin: 20px;
+}
+
+.taco img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.taco h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+/* Sección del menú */
+#menu {
+    background-color: #eaeaea;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+}
+
+.menu-item p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #c0392b;
+}
+
+/* Sección de pedidos */
+#pedidos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form input, form select, form button {
+    padding: 12px 20px;
+    margin: 10px 0;
+    width: 80%;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form select:focus {
+    border-color: #ff5733;
+    outline: none;
+}
+
+/* Sección de contacto */
+#contacto {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+form textarea:focus {
+    border-color: #ff5733;
+    outline: none;
+}
+
+/* Galería */
+#galeria {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 45%;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Media Queries (Responsividad) */
+@media screen and (max-width: 768px) {
+    .taco-list, .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taco, .menu-item {
+        width: 80%;
+    }
+
+    .galeria img {
+        width: 80%;
+    }
+
+    form input, form select, form button, form textarea {
+        width: 90%;
+    }
+}
